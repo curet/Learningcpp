@@ -28,3 +28,17 @@ cout << "My pets are" << endl << "dog";
 cout << endl << "cat" << endl << "bird" << endl;
 
 //--------------------------------------------------------------------------
+
+// Simple rearange programm correction
+#include <iostream>
+using namespace std;
+int main()
+{
+	cout << "Sucess\n";
+	cout << "Sucess Sucess\n\n";
+	cout << "Sucess";
+
+return 0;
+}
+
+//--------------------------------------------------------------------------
