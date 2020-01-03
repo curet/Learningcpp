@@ -139,3 +139,145 @@ amount = 32LL;
 // -->> 031
 
 //--------------------------------------------------------------------------
+// 2.7 THE char DATA TYPE
+
+char letter;
+
+// This statement assigns the character 'g'
+// to the letter variable.
+letter = 'g'; // ***IMPORTANT!!! There is a difference
+							// between 'g' and "g". The second one is
+							// a string character in C++
+
+letter = "g" // <-- This is going to give me an error
+						 // because I am assigning a string to a char.
+	// Will appear --> ERROR! Cannot assign a string to a char.
+
+
+//--------------------------------------------------------------------------
+// This program works with characters.
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	char letter;
+	
+	letter = 'A';
+	cout << letter << endl;
+	letter = 'B';
+	cout << letter << endl;
+	return 0;
+}
+//--------------------------------------------------------------------------
+
+// This program demonstrates the close relationship between
+// characters and integers.
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	char letter;
+	
+	letter = 65;
+	cout << letter << endl;
+	letter = 66;
+	cout << letter << endl;
+	return 0;
+}
+
+//--------------------------------------------------------------------------
+// 2.8 THE C++ string CLASS
+
+// This program demonstrates the string class.
+#include <iostream>
+#include <string> // Required for the string class.
+using namespace std;
+
+int main()
+{
+	string movieTitle;
+
+	movieTitle = "Wheels of Fury";
+	cout << "My favorite movie is " << movieTitle << endl;
+	return 0;
+}
+
+//--------------------------------------------------------------------------
+
+// Problem 2.11
+    ASCII code for:
+    C = 67
+    F = 70
+    W = 87
+    
+    // Problem 2.12
+    'B' <--- character literal
+    "B" <--- string literal
+    
+    // Problem 2.13
+    How many bytes do the following literal use?
+    'Q' = 1 byte
+    "Q" = 2 bytes
+    "Sales" = 6 bytes
+    '\n' = 1 byte
+    
+    // Problem 2.14
+    Write a program that has the following variables:
+    first, middle, and last. Store your initials in these
+    variables and then display them on the screen.
+    
+    #include <iostream>
+    using namespace std;
+    
+    int main()
+    {
+    	char first, middle, last;
+    
+    	first = 'J';
+    	middle = 'C';
+    	last = 'S';
+    	
+    	cout << first << '\n';
+    	cout << middle << '\n';
+    	cout << last << '\n';
+    	
+    	return 0;
+    }
+    
+    // Problem 2.15
+    What is wrong with the following statement?
+    
+    char letter = "Z"; <-- the problem it's that there is a
+    											 string assign to a char literal.
+    
+    // Problem 2.16
+    #include <string> // it is the header file to be included
+    									// in order to use string objects.
+    
+    // Problem 2.17
+    #include <iostream>
+    #include <string>
+    using namespace std;
+    
+    int main()
+    {
+    	string myName;
+    	string myNumber;
+    	string myAddress;
+    
+    	myName = "What is my Name?";
+    	myNumber = "1-801-111-0000";
+    	myAddress = "This is my address";
+    
+    	cout << myName << endl;
+    	cout << "My Number is: " << myNumber << endl;
+    	cout << myAddress << endl;
+    	
+    	return 0;
+    
+    }
+
+
+//--------------------------------------------------------------------------
