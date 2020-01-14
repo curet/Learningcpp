@@ -318,6 +318,20 @@ int main()
 }
 
 //--------------------------------------------------------------------------
+
+//Example of assigning Floating-Point Values to Integer Var.
+
+int number;
+number = 7.5; // Assigns 7 to number
+
+// Example Assigning a floating-point variable to an integer variable
+
+int i;
+float f;
+f = 7.5;
+i = f; // Assigns 7 to i.
+
+//--------------------------------------------------------------------------
 2.11 DETERMINING THE SIZE OF A DATA TYPE
 // This program determine the size of integers, long,
 // integers, and long doubles.
