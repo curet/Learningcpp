@@ -19,3 +19,30 @@ int main()
 
 }
 
+// CHECKPOINT
+
+2.18 No
+
+2.19
+
+		6.31E17
+
+2.20
+		
+	//This program display the age and the weight
+	#include <iostream>
+	using namespace std;
+	
+	int main()
+	{
+			int age;
+			float weight;
+			age = 26;
+			weight = 180;
+			
+			cout << "My age is "<< age << " and my weight is " 
+													<< weight <<" pounds" << endl;
+
+			return 0;
+}
+
