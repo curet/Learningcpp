@@ -20,3 +20,15 @@ int main()
         return 0;
 
 }
+
+//--------------------------------------------------------------------------
+
+// Checkpoint 2.16
+2.25
+
+const EULER_NUMBER = 2.71828;
+const MINUTES_PER_YEAR = 5.256E5;
+const GRAV_ACCE_FEET_PER_SECONDS = 32.2;
+const GRAV_ACCE_METERS_PER_SECONDS = 9.8;
+const METERS_PER_MILE = 1609;
+
