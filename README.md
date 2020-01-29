@@ -28,4 +28,4 @@ The things that are going to be documented here are:
 
 
 ### Copyright Notes:
-  - Most of the programs appearing of this repository are similar or identical to the ones appearing in the book. I add them after reviewing the programs or remaking them as I go through the chapters' reviews.
+  - Most of the programs appearing of this repository in the `Chapters` folder are similar or identical to the ones appearing in the book. I added them after reviewing these programs or remaking them as I go through the chapters' reviews. So most of the honor or all of them concerning to the programs appearing in the mentioned folder must be given to the author of the book and I don't claim those programs to be of my creation.
