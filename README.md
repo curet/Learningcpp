@@ -25,3 +25,7 @@ The things that are going to be documented here are:
 
 [Here are the Projects](https://github.com/curet/Learningcpp/tree/master/Projects) (which are going to be in a directory with the same name of the chapter inspired them or come from):
   - Introduction to C++
+
+
+### Copyright Notes:
+  - Most of the programs appearing of this repository are similar or identical to the ones appearing in the book. I add them after reviewing the programs or remaking them as I go through the chapters' reviews.
