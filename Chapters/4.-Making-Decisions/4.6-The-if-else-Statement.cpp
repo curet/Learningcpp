@@ -19,7 +19,7 @@ int main()
    cout << "Enter your numeric test score and I will\n"
         << "tell you the letter grade you earned: ";
    cin >> testScore;
-   
+
    // Determine the letter grade.
    if (testScore >= A_SCORE)
       cout << "Your grade is A.\n";
@@ -31,7 +31,7 @@ int main()
       cout << "Your grade is D.\n";
    else
       cout << "Your grade is F.\n";
-   
+
    return 0;
 }
 
@@ -56,7 +56,7 @@ int main()
    cout << "Enter your numeric test score and I will\n"
         << "tell you the letter grade you earned: ";
    cin >> testScore;
-   
+
    // Determine the letter grade.
    if (testScore >= A_SCORE)
       cout << "Your grade is A.\n";
@@ -72,4 +72,4 @@ int main()
       cout << "Invalid test score.\n";
 
    return 0;
-} 
+}
