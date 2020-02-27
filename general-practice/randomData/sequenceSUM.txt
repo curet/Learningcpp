@@ -1,0 +1,10 @@
+In row 1 the sum is: 57
+In row 2 the sum is: 153
+In row 3 the sum is: 207
+In row 4 the sum is: 211
+In row 5 the sum is: 328
+In row 6 the sum is: 363
+In row 7 the sum is: 323
+In row 8 the sum is: 295
+In row 9 the sum is: 469
+In row 10 the sum is: 655
