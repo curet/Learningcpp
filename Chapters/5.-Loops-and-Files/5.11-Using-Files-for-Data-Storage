@@ -1,0 +1,331 @@
+// 5.11 USING FILES FOR DATA STORAGE
+
+// This program writes data to a file.
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main()
+{
+   ofstream outputFile;
+   outputFile.open("demofile.txt");
+
+   cout << "Now writing data to the file.\n";
+
+   // Write four names to the file.
+   outputFile << "Bach\n";
+   outputFile << "Beethoven\n";
+   outputFile << "Mozart\n";
+   outputFile << "Schubert\n";
+
+   // Close the file
+   outputFile.close();
+   cout << "Done.\n";
+   return 0;
+}
+
+// --------------------------------------------
+
+// This program writes data to a single line in a file.
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main()
+{
+   ofstream outputFile;
+   outputFile.open("demofile.txt");
+
+   cout << "Now writing data to the file.\n";
+
+   // Write four names to the file.
+   outputFile << "Bach";
+   outputFile << "Beethoven";
+   outputFile << "Mozart";
+   outputFile << "Schubert";
+
+   // Close the file
+   outputFile.close();
+   cout << "Done.\n";
+   return 0;
+} 
+
+// ------------------------------------------------
+
+// This program writes user input to a file.
+#include<iostream>
+#include<fstream>
+using namespace std;
+
+int main()
+{
+	ofstream outputFile;
+	int number1, number2, number3;
+
+	// Open an output file.
+	outputFile.open("Numbers.txt");
+
+	// Get three numbers from the user.
+	cout << "Enter a number: ";
+	cin >> number1;
+	cout << "Enter another number: ";
+	cin >> number2;
+	cout << "One more time. Enter a number: ";
+	cin >> number3;
+
+	// Write the numbers to the file.
+	outputFile << number1 << endl;
+	outputFile << number2 << endl;
+	outputFile << number3 << endl;
+	cout << "The numbers were saved to a file.\n";
+
+	// Close the file.
+	outputFile.close();
+	cout << "Done.\n";
+	return 0;
+}
+
+// ----------------------------------------------------
+
+// This program writes user input to a file.
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+
+int main()
+{
+   ofstream outputFile;
+   string name1, name2, name3;
+
+   // Open an output file.
+   outputFile.open("Friends.txt");
+
+   // Get the names of three friends.
+   cout << "Enter the names of three friends.\n";
+   cout << "Friend #1: ";
+   cin >> name1;
+   cout << "Friend #2: ";
+   cin >> name2;
+   cout << "Friend #3: ";
+   cin >> name3;
+
+   // Write the names to the file.
+   outputFile << name1 << endl;
+   outputFile << name2 << endl;
+   outputFile << name3 << endl;
+   cout << "The names were saved to a file.\n";
+
+   // Close the file
+   outputFile.close();
+   return 0;
+} 
+
+// -----------------------------------------------------------
+
+// This program reads data from a file.
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+
+int main()
+{
+   ifstream inputFile;
+   string name;
+
+   inputFile.open("Friends.txt");
+   cout << "Reading data from the file.\n";
+  
+   inputFile >> name;      // Read name 1 from the file
+   cout << name << endl;   // Display name 1
+  
+   inputFile >> name;      // Read name 2 from the file
+   cout << name << endl;   // Display name 2
+  
+   inputFile >> name;      // Read name 3 from the file
+   cout << name << endl;   // Display name 3
+
+   inputFile.close();      // Close the file
+   return 0;
+} 
+
+// ----------------------------------------------------------------
+
+// This program reads numbers from a file.
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main()
+{
+   ifstream inFile;
+   int value1, value2, value3, sum;
+
+   // Open the file.
+   inFile.open("NumericData.txt");
+
+   // Read the three numbers from the file.
+   inFile >> value1;
+   inFile >> value2;
+   inFile >> value3;
+
+   // Close the file.
+   inFile.close();
+
+   // Calculate the sum of the numbers.
+   sum = value1 + value2 + value3;
+
+   // Display the three numbers.
+   cout << "Here are the numbers:\n"
+        << value1 << " " << value2
+        << " " << value3 << endl;
+
+   // Display the sum of the numbers.
+   cout << "Their sum is: " << sum << endl;
+   return 0;
+} 
+
+// -----------------------------------------------------------------
+
+// This program writes user input to a file.
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main()
+{
+   ofstream outputFile;  // File stream object
+   int numberOfDays;     // Number of days of sales
+   double sales;         // Sales amount for a day
+   
+   // Get the number of days.
+   cout << "For how many days do you have sales? ";
+   cin >> numberOfDays;
+
+   // Open a file named Sales.txt.
+   outputFile.open("Sales.txt");
+
+   // Get the sales for each day and write it
+   // to the file.
+   for (int count = 1; count <= numberOfDays; count++)
+   {
+      // Get the sales for a day.
+      cout << "Enter the sales for day "
+           << count << ": ";
+      cin >> sales;
+      
+      // Write the sales to the file.
+      outputFile << sales << endl;
+   }
+
+   // Close the file.
+   outputFile.close();
+   cout << "Data written to Sales.txt\n";
+   return 0;
+}
+
+// ---------------------------------------------------------------------
+
+// This program reads data from a file.
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main()
+{
+   ifstream inputFile;
+   int number;
+
+   // Open the file.
+   inputFile.open("ListOfNumbers.txt");
+
+   // Read the numbers from the file and
+   // display them.
+   while (inputFile >> number)
+   {
+      cout << number << endl;
+   }
+
+   // Close the file.
+   inputFile.close();
+   return 0;
+}
+
+// ----------------------------------------------------------------------
+
+// This program tests for file open errors.
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main()
+{
+   ifstream inputFile;
+   int number;
+
+   // Open the file.
+   inputFile.open("BadListOfNumbers.txt");
+
+   // If the file successfully opened, process it.
+   if (inputFile)
+   {
+      // Read the numbers from the file and
+      // display them.
+      while (inputFile >> number)
+      {
+         cout << number << endl;
+      }
+
+      // Close the file.
+      inputFile.close();
+   }
+   else
+   {
+      // Display an error message.
+      cout << "Error opening the file.\n";
+   }
+   return 0;
+}
+
+// ----------------------------------------------------------------------------
+
+// This program lets the user enter a filename.
+#include <iostream>
+#include <string>
+#include <fstream>
+using namespace std;
+
+int main()
+{
+   ifstream inputFile;
+   string filename;
+   int number;
+
+   // Get the filename from the user.
+   cout << "Enter the filename: ";
+   cin >> filename;
+
+   // Open the file.
+   inputFile.open(filename);
+
+   // If the file successfully opened, process it.
+   if (inputFile)
+   {
+      // Read the numbers from the file and
+      // display them.
+      while (inputFile >> number)
+      {
+         cout << number << endl;
+      }
+
+      // Close the file.
+      inputFile.close();
+   }
+   else
+   {
+	   // Display an error message.
+	   cout << "Error opening the file.\n";
+   }
+   return 0;
+}
