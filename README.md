@@ -11,12 +11,13 @@ The things that are going to be documented here are:
   - Projects recommended by the book or something comes in my mind to create in the process.
 
 ## [Listing Chapters](https://github.com/curet/Learningcpp/tree/master/Chapters):
-  - Chapter 2. [Introduction to C++](https://github.com/curet/Learningcpp/blob/master/Chapters/1_Introduction.cpp)
-  - Chapter 3. Expressions and Interactivity
-  - Chapter 4. Making Decision
-  - Chapter 5. Loops and Files
-  - Chapter 6. Functions
-  - Chapter 7. Arrays
+  - Chapter 1. [Introduction to Computers and Programming](https://github.com/curet/Learningcpp/tree/master/Chapters/1.-Introduction-to-Computers-and-Programming)
+  - Chapter 2. [Introduction to C++](https://github.com/curet/Learningcpp/tree/master/Chapters/2.-Introduction-to-cpp)
+  - Chapter 3. [Expressions and Interactivity](https://github.com/curet/Learningcpp/tree/master/Chapters/3.-Expressions-and-Interactivity)
+  - Chapter 4. [Making Decision](https://github.com/curet/Learningcpp/tree/master/Chapters/4.-Making-Decisions)
+  - Chapter 5. [Loops and Files](https://github.com/curet/Learningcpp/tree/master/Chapters/5.-Loops-and-Files)
+  - Chapter 6. [Functions](https://github.com/curet/Learningcpp/tree/master/Chapters/6.-Functions)
+  - Chapter 7. [Arrays](https://github.com/curet/Learningcpp/tree/master/Chapters/7.-Arrays)
   - Chapter 8. Searching and Sorting Arrays
   - Chapter 9. Pointers
   - Chapter 11. Structured Data
