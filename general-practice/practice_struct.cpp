@@ -22,7 +22,7 @@ enum DISPLAY{TEST = 1, SUM = 2} USER; // to test enum
 void testVectorStructs(vector <Sequences> &r, vector<vector<Sequences> > &m){
 
     
-    for(int i=0; i<3; i++){
+    for(int i=0; i<4; i++){
         r.push_back(Sequences());                  // push_back();
         r[i].mean = 30 + i;
     }
@@ -32,19 +32,20 @@ void testVectorStructs(vector <Sequences> &r, vector<vector<Sequences> > &m){
     
     //cout << r[0].standardDeviation << endl;
 
-    for(int i=0; i<3; i++){
+    for(int i=0; i<4; i++){
         r.push_back(Sequences());                  // push_back();
         r[i].standardDeviation = 3.8 + i/3.8;
     }
 
-    for(int i=0; i<3; i++){
-        m.push_back(vector<Sequences>());          // push_back();
+
+    m.push_back(vector<Sequences>());          // push_back();
+    for(int i=0; i<4; i++){
         m[0].push_back(Sequences());               // push_back();
-        m[0][0].data = 0.784365 + 0.13234;
+        m[0][i].data = 0.784365 + (i * 0.13234);
     }
 
 
-    for(int i=0; i<3; i++){
+    for(int i=0; i<4; i++){
         cout << "enter a coordinates: ";
         r.push_back(Sequences());
         cin >> r[i].coordinates;
@@ -56,16 +57,19 @@ void testVectorStructs(vector <Sequences> &r, vector<vector<Sequences> > &m){
     //display using loops
     cout << endl;
     
-    for(int i=0; i<r.size()-1; i++){
+    cout << (long unsigned)sizeof(((struct Sequences*)0)->mean) << "<- size of vector mean\n\n";
+    for(int i=0; i<(sizeof ((Sequences*)0)->mean)-1; i++){
         cout <<r[i].mean << "m" << endl;
     }
 
-    for(int i=0; i<r.size()-1; i++){
+    cout << sizeof ((Sequences*)0)->standardDeviation << "<- size of vector standardDeviation\n\n";
+    for(int i=0; i<(sizeof ((Sequences*)0)->standardDeviation)-1; i++){
         cout <<r[0].standardDeviation << "sd" << endl;
     }
 
-    for(int i=0; i<m.size()-1;i++){
-        cout << m[0][i].data << endl;
+    cout << sizeof ((Sequences*)0)->data << "<- size of vector data\n\n";
+    for(int i=0; i<(sizeof ((Sequences*)0)->data)-1;i++){
+        cout << m[0][i].data << "data" << endl;
     }
 
     cout << endl;
