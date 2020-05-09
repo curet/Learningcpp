@@ -1,4 +1,4 @@
-// to review how to creat a efficient struct to read a file by row
+// to review how to create an efficient struct to read a file by row using vector
 #include <iostream>
 #include <vector>
 
