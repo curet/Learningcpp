@@ -21,23 +21,35 @@ enum DISPLAY{TEST = 1, SUM = 2} USER; // to test enum
 
 void testVectorStructs(vector <Sequences> &r, vector<vector<Sequences> > &m){
 
-    r.push_back(Sequences());                  // push_back();
-    r[0].mean = 30;
+    
+    for(int i=0; i<3; i++){
+        r.push_back(Sequences());                  // push_back();
+        r[i].mean = 30 + i;
+    }
+    
     //cout << r[0].mean << endl;
 
-    r.push_back(Sequences());                  // push_back();
-    r[0].standardDeviation = 3.8;
+    
     //cout << r[0].standardDeviation << endl;
 
-    m.push_back(vector<Sequences>());          // push_back();
-    m[0].push_back(Sequences());               // push_back();
-    m[0][0].data = 0.784365;
-    
+    for(int i=0; i<3; i++){
+        r.push_back(Sequences());                  // push_back();
+        r[i].standardDeviation = 3.8 + i/3.8;
+    }
 
-    m.push_back(vector<Sequences>());          // push_back();
-    m[0].push_back(Sequences());               // push_back();
-    m[0][1].data = 0.6793425;
+    for(int i=0; i<3; i++){
+        m.push_back(vector<Sequences>());          // push_back();
+        m[0].push_back(Sequences());               // push_back();
+        m[0][0].data = 0.784365 + 0.13234;
+    }
 
+
+    for(int i=0; i<3; i++){
+        cout << "enter a coordinates: ";
+        r.push_back(Sequences());
+        cin >> r[i].coordinates;
+        cout << endl;
+    }
     // cout << m[0][0].data << endl;
     // cout << m[0][1].data << endl;
 
@@ -45,21 +57,28 @@ void testVectorStructs(vector <Sequences> &r, vector<vector<Sequences> > &m){
     cout << endl;
     
     for(int i=0; i<r.size()-1; i++){
-        cout <<r[0].mean << "m" << endl;
+        cout <<r[i].mean << "m" << endl;
     }
 
     for(int i=0; i<r.size()-1; i++){
         cout <<r[0].standardDeviation << "sd" << endl;
     }
 
-    for(int i=0; i<m.size();i++){
+    for(int i=0; i<m.size()-1;i++){
         cout << m[0][i].data << endl;
+    }
+
+    cout << endl;
+    for(int i=0; i<r.size()-1; i++){
+        cout <<r[i].coordinates << "coor" << endl;
     }
 
 }
 
 void sumMeanDataSD(vector <Sequences> &r, vector<vector<Sequences> > &m){
-    cout << r[0].mean + r[0].standardDeviation + m[0][0].data << endl;
+
+    for(int i=0; i<r.size()-1; i++) // r.rize() it is on purpose, as m < r, then the last numbers displayed will be "garbage"
+        cout << r[i].mean + r[i].standardDeviation + m[0][i].data << endl;
 }
 
 int main(){
