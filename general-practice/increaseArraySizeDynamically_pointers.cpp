@@ -5,7 +5,6 @@ using namespace std;
 
 int main(){
 
-    //int array[] = {};
 
     double * array = nullptr;
     array = new double[1];
@@ -23,7 +22,9 @@ int main(){
         i++;
     }
 
-    int sizeOfArray = i-1;
+    int sizeOfArray = i-1; // it looks like this is one of the best way to get the size of a array created by pointers
+                           // since it looks like everything 'new' it is called the size is lost
+
     for(int j=0; j<sizeOfArray; j++){
         cout << array[j] << " ";
     }
@@ -52,9 +53,30 @@ int main(){
         cout << normalized[k] << " ";
     }
 
+    string * name = nullptr;
+    name = new string[1];
+
+    cout << "\nEnter name: ";
+
+        int z=0;
+    while(name[z-1] != "-1"){
+
+        cin >>  name[z];
+        cout << "Enter another name: ";
+
+        z++;
+    }
+
+    int stringArraySize = z-1;
+
+    for(int x=0; x < stringArraySize; x++){
+        cout << name[x] << "  ";
+    }
+
     delete [] array;
     delete [] normalized;
-
-    return 0;
+    delete [] name;
     
+    return 0;
+
 }
